@@ -1,5 +1,5 @@
 # ElementPlugin
-idea plugin for develop element. before use, you must install <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a> plugin.
+idea plugin for develop with element ui. before use, you must install <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a> plugin.
 ## basic functions
 ### 1 . see tag document (ctrl + Q)
 ![](./img/doc.gif)
