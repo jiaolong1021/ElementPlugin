@@ -1,0 +1,47 @@
+<idea-plugin>
+  <id>com.shen.plugin.element</id>
+  <name>Element</name>
+  <version>1.0</version>
+  <vendor url="https://github.com/jiaolong1021/ElementPlugin">plugin homepage</vendor>
+
+  <description><![CDATA[
+      support for element framework,
+      before use this plugin, you must install plugin <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      improve your code speed<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.plugins.vue</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- 代码块提示 -->
+    <defaultLiveTemplatesProvider implementation="element.ElementTemplatesProvider" />
+
+    <!-- 标签文档提示 -->
+    <lang.documentationProvider implementationClass="element.document.DocumentProvider" language="HTML" order="first" />
+    <lang.documentationProvider implementationClass="element.document.DocumentProvider" language="Vue" order="first" />
+
+    <!-- 标签自动完成、属性提示 -->
+    <xml.tagNameProvider implementation="element.ElementTagNameProvider" />
+    <xml.elementDescriptorProvider implementation="element.ElementTagNameProvider" order="first" />
+    <xml.attributeDescriptorsProvider implementation="element.ElementAttributesProvider" order="first" />
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
