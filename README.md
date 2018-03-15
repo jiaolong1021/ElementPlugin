@@ -9,3 +9,8 @@ idea plugin for develop with element ui. before use, you must install <a href="h
 ![](./img/tag.gif)
 ### 4. tag property tip
 ![](./img/property.gif)
+## download
+if you use webstorm or IntelliJ IDEA, you can download from plugin repositories.
+![](./img/idea.png)
+
+or you can direct download from <a href="https://plugins.jetbrains.com/plugin/10524-element">jetbrains plugins repository</a> 
