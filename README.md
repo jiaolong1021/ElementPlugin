@@ -14,3 +14,5 @@ if you use webstorm or IntelliJ IDEA, you can download from plugin repositories.
 ![](./img/idea.png)
 
 or you can direct download from <a href="https://plugins.jetbrains.com/plugin/10524-element">jetbrains plugins repository</a> 
+## questions feedback
+if you has any questions or good idea, you can call me by qq: **2278371826** or by email **shenjiaolong1021@163.com** 
