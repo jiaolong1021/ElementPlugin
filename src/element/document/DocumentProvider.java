@@ -39,39 +39,29 @@ public class DocumentProvider extends AbstractDocumentationProvider {
     @Override
     public String generateDoc(final PsiElement element, @Nullable final PsiElement originalElement) {
         // 相关处理，不处理返回null
-        String text = element.getText();
+        String text = originalElement.getText();
 
         if (null != text) {
-            String split = text.split(">")[0];
-            /* 必须是标签 */
-            if (!split.contains("<")) {
-                return null;
-            }
-
-            String handleText = split.replaceAll("<", "").split(" ")[0];
-
-            try {
-                String textHandle = handleText.replaceAll("-", "").replaceAll("\n|\r\n", "");
-                String doc = "";
-                Class clazz = Class.forName("document.DocumentConstant");
-                Field[] fields = clazz.getFields();
-                for (Field field : fields) {
-                    if (textHandle.equals(field.getName()) && field.getType().toString().endsWith("java.lang.String")) {
+            String doc = "doc: ";
+            String textHandle = text.replaceAll("-", "").replaceAll("\n|\r\n", "");
+            Class clazz = DocumentConstant.class;
+            Field[] fields = clazz.getFields();
+            for (Field field : fields) {
+                if (textHandle.equals(field.getName()) && field.getType().toString().endsWith("java.lang.String")) {
+                    try {
                         doc = (String) field.get(DocumentConstant.class);
-                        break;
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
                     }
+                    break;
                 }
-
-                if ("".equals(doc)) {
-                    return null;
-                }else{
-                    return doc;
-                }
-            } catch (ClassNotFoundException | IllegalAccessException e1) {
-                e1.printStackTrace();
+            }
+            if ("".equals(doc)) {
+                return null;
+            }else{
+                return doc;
             }
         }
-
         return null;
     }
 }

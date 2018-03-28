@@ -405,6 +405,62 @@
         </context>
     </template>
 
+    <template name="el-table-column" value="&lt;el-table-column&#xa;	header-align=&quot;center&quot;&#xa;	align=&quot;center&quot;&#xa;	prop=&quot;columnProp&quot;&#xa;	label=&quot;columnLabel&quot;&#xa;	&gt;&#xa;&lt;/el-table-column&gt;"
+              description="element table column" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-table-column:left" value="&lt;el-table-column&#xa;	header-align=&quot;left&quot;&#xa;	align=&quot;left&quot;&#xa;	prop=&quot;columnProp&quot;&#xa;	label=&quot;columnLabel&quot;&#xa;	&gt;&#xa;&lt;/el-table-column&gt;"
+              description="element table column" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-rules:required" value="{require: true, message:'请输入', trigger: &quot;blur&quot;}"
+              description="element rules required" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-rules:minMax" value="{ min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }"
+              description="element rules minMax" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-rules:date" value="{ type: 'date', required: true, message: '请选择日期', trigger: 'change' }"
+              description="element rules date" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-rules:array" value="{ type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }"
+              description="element rules array" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-table-column:slot" value="&lt;template slot-scope=&quot;scope&quot;&gt;&#xa;  {{scope.row.status)}}&#xa;&lt;/template&gt;"
+              description="element table column" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
     <template name="el-tag" value="&lt;el-tag type=&quot;success&quot;&gt;标签二&lt;/el-tag&gt;"
               description="element tag" toReformat="true" toShortenFQNames="true">
         <context>
@@ -776,6 +832,14 @@
 
     <template name="el-collapse" value="&lt;el-collapse v-model=&quot;activeNames&quot; @change=&quot;handleChange(val)&quot;&gt;&#xa;  &lt;el-collapse-item title=&quot;一致性 Consistency&quot; name=&quot;1&quot;&gt;&#xa;    &lt;div&gt;与现实生活一致&lt;/div&gt;&#xa;    &lt;div&gt;在界面中一致&lt;/div&gt;&#xa;  &lt;/el-collapse-item&gt;&#xa;  &lt;el-collapse-item title=&quot;反馈 Feedback&quot; name=&quot;2&quot;&gt;&#xa;    &lt;div&gt;控制反馈&lt;/div&gt;&#xa;    &lt;div&gt;页面反馈&lt;/div&gt;&#xa;  &lt;/el-collapse-item&gt;&#xa;&lt;/el-collapse&gt;"
               description="element collapse" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="elm-form-validate" value="this.$refs[formName].validate((valid) =&gt; {&#xa;  if (valid) {&#xa;    alert('submit!');&#xa;  } else {&#xa;    console.log('error submit!!');&#xa;    return false;&#xa;  }&#xa;});"
+              description="element form validate" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
             <option name="OTHER" value="true" />
