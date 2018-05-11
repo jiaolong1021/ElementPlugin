@@ -1,8 +1,11 @@
 <idea-plugin>
-    <id>com.element.plugin.element</id>
+    <id>com.shen.plugin.element</id>
     <name>element</name>
     <version>2.0</version>
     <vendor url="https://github.com/jiaolong1021/ElementPlugin">element</vendor>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
 
     <description><![CDATA[
       support for element framework,
