@@ -27,6 +27,11 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         return file != null ? " [" + file.getName() + "]" : "";
     }
 
+    private static String getLocationStringTest(PsiElement element) {
+        PsiFile file = element.getContainingFile();
+        return file != null ? " [" + file.getName() + "]" : "";
+    }
+
     @NotNull
     private static String renderPropertyValue(IProperty prop) {
         String raw = prop.getValue();
