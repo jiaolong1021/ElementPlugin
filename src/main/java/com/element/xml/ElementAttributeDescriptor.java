@@ -1,25 +1,31 @@
-package element;
+package com.element.xml;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
+import com.intellij.psi.meta.PsiPresentableMetaData;
 import com.intellij.psi.xml.XmlElement;
 import com.intellij.util.ArrayUtil;
 import com.intellij.xml.impl.BasicXmlAttributeDescriptor;
 import com.intellij.xml.impl.XmlAttributeDescriptorEx;
+import com.element.ElementIcons;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import javax.swing.*;
+
 /**
  * @author sjl
  */
-public class ElementAttributeDescriptor extends BasicXmlAttributeDescriptor implements XmlAttributeDescriptorEx {
+public class ElementAttributeDescriptor extends BasicXmlAttributeDescriptor implements XmlAttributeDescriptorEx, PsiPresentableMetaData {
     protected final Project project;
     private final String attributeName;
+    private String[] attributeValues = null;
 
-    public ElementAttributeDescriptor(final Project project, String attributeName) {
+    public ElementAttributeDescriptor(final Project project, String attributeName, String[] attributeValues) {
         this.project = project;
         this.attributeName = attributeName;
+        this.attributeValues = attributeValues;
     }
 
     @Override
@@ -77,7 +83,7 @@ public class ElementAttributeDescriptor extends BasicXmlAttributeDescriptor impl
 
     @Override
     public String[] getEnumeratedValues() {
-        return null;
+        return attributeValues;
     }
 
     @Override
@@ -89,5 +95,16 @@ public class ElementAttributeDescriptor extends BasicXmlAttributeDescriptor impl
     @Override
     public String handleTargetRename(@NotNull @NonNls String newTargetName) {
         return newTargetName;
+    }
+
+    @Override
+    public String getTypeName() {
+        return null;
+    }
+
+    @Nullable
+    @Override
+    public Icon getIcon() {
+        return ElementIcons.FILE;
     }
 }

@@ -12,6 +12,8 @@ idea plugin for develop with element ui. before use, you must install <a href="h
 ### 5. method tip (begin width elm )
 include [message, alert, confirm, notify, prompt]
 ![](./img/methods.gif)
+### 6. attribute tip and auto complete <a>(new)</a>
+![](./img/attr-tip.gif)
 ## download
 if you use webstorm or IntelliJ IDEA, you can download from plugin repositories.
 ![](./img/idea.png)

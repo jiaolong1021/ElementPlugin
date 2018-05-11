@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.element.plugin.element</id>
+    <name>element</name>
+    <version>2.0</version>
+    <vendor url="https://github.com/jiaolong1021/ElementPlugin">element</vendor>
+
+    <description><![CDATA[
+      support for element framework,
+      before use this plugin, you must install plugin <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      1. optimize, <br/> 2. add tag special attribute and auto tip.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>JavaScript</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileTypeFactory implementation="com.element.ElementFileTypeFactory" />
+        <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
+
+        <!-- 代码块提示 -->
+        <defaultLiveTemplatesProvider implementation="com.element.ElementTemplatesProvider"/>
+
+        <!-- 标签文档提示 -->
+        <lang.documentationProvider language="HTML" implementationClass="com.element.document.DocumentProvider" order="first"/>
+
+        <!-- 标签自动完成、属性提示 -->
+        <xml.tagNameProvider implementation="com.element.xml.ElementTagNameProvider"/>
+        <xml.elementDescriptorProvider implementation="com.element.xml.ElementTagNameProvider" order="first"/>
+        <xml.attributeDescriptorsProvider implementation="com.element.xml.ElementAttributesProvider" />
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

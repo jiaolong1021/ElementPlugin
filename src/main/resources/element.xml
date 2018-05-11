@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="element">
+    <template name="el-fade-in" value="&lt;transition name=&quot;el-fade-in&quot;&gt;&#xa;	&lt;div v-show=&quot;show&quot; class=&quot;transition-box&quot;&gt;.el-fade-in&lt;/div&gt;&#xa;&lt;/transition&gt;"
+              description="el fade in" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
+    <template name="el-fade-in:linear" value="&lt;transition name=&quot;el-fade-in-linear&quot;&gt;&#xa;	&lt;div v-show=&quot;show&quot; class=&quot;transition-box&quot;&gt;.el-fade-in-linear&lt;/div&gt;&#xa;&lt;/transition&gt;"
+              description="el fade in linear" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
+    <template name="el-zoom-in:center" value="&lt;transition name=&quot;el-zoom-in-center&quot;&gt;&#xa;	&lt;div v-show=&quot;show&quot; class=&quot;transition-box&quot;&gt;.el-zoom-in-center&lt;/div&gt;&#xa;&lt;/transition&gt;"
+              description="el zoom in center" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
+    <template name="el-zoom-in:top" value="&lt;transition name=&quot;el-zoom-in-top&quot;&gt;&#xa;	&lt;div v-show=&quot;show&quot; class=&quot;transition-box&quot;&gt;.el-zoom-in-top&lt;/div&gt;&#xa;&lt;/transition&gt;"
+              description="el zoom in top" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
+    <template name="el-zoom-in:bottom" value="&lt;transition name=&quot;el-zoom-in-bottom&quot;&gt;&#xa;	&lt;div v-show=&quot;show&quot; class=&quot;transition-box&quot;&gt;.el-zoom-in-bottom&lt;/div&gt;&#xa;&lt;/transition&gt;"
+              description="el zoom in bottom" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
+    <template name="el-collapse-transition" value="&lt;el-collapse-transition&gt;&#xa;	&lt;div v-show=&quot;show&quot;&gt;&#xa;		&lt;div class=&quot;transition-box&quot;&gt;el-collapse-transition&lt;/div&gt;&#xa;		&lt;div class=&quot;transition-box&quot;&gt;el-collapse-transition&lt;/div&gt;&#xa;	&lt;/div&gt;&#xa;&lt;/el-collapse-transition&gt;"
+              description="el collapse animation" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+        </context>
+    </template>
+
     <template name="el-row" value="&lt;el-row :gutter=&quot;$gutter$&quot;&gt;&#xa; &lt;el-col :span=&quot;$span$&quot;&gt;$cont$&lt;/el-col&gt;&#xa;&lt;/el-row&gt;"
               description="layout with row and col" toReformat="false" toShortenFQNames="true">
         <variable name="gutter" expression="gutter between row" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
@@ -7,7 +49,6 @@
         <variable name="cont" expression="cont" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -17,7 +58,13 @@
         <variable name="buttonCont" expression="buttonCont" defaultValue="&quot;buttonCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-button-group" value="&lt;el-button-group&gt;&#xa;  &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-arrow-left&quot;&gt;上一页&lt;/el-button&gt;&#xa;  &lt;el-button type=&quot;primary&quot;&gt;下一页&lt;i class=&quot;el-icon-arrow-right el-icon--right&quot;&gt;&lt;/i&gt;&lt;/el-button&gt;&#xa;&lt;/el-button-group&gt;"
+              description="element button group" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
         </context>
     </template>
 
@@ -28,7 +75,6 @@
         <variable name="radioCont" expression="radioCont" defaultValue="&quot;radioCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -41,7 +87,6 @@
         <variable name="cont2" expression="cont2" defaultValue="&quot;cont2&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -50,7 +95,6 @@
         <variable name="radioButtonCont" expression="radioButtonCont" defaultValue="&quot;radioButtonCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -60,7 +104,6 @@
         <variable name="checkboxCont" expression="checkboxCont" defaultValue="&quot;checkboxCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -74,7 +117,6 @@
         <variable name="cityCont" expression="cityCont" defaultValue="&quot;cityCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -85,7 +127,6 @@
         <variable name="checkboxCont" expression="checkboxCont" defaultValue="&quot;checkboxCont&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -95,7 +136,6 @@
         <variable name="placeholder" expression="placeholder" defaultValue="&quot;placeholder&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -105,7 +145,6 @@
         <variable name="model" expression="model" defaultValue="&quot;model&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -115,7 +154,6 @@
         <variable name="placeholder" expression="&quot;placeholder&quot;" defaultValue="&quot;placeholder&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -128,7 +166,6 @@
         <variable name="label" defaultValue="&quot;label&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -140,7 +177,6 @@
         <variable name="item" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -151,7 +187,6 @@
         <variable name="handleChange" defaultValue="&quot;handleChange&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -162,7 +197,6 @@
         <variable name="inactiveColor" defaultValue="&quot;#ff4949&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -171,7 +205,6 @@
         <variable name="model" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -180,7 +213,6 @@
         <variable name="model" defaultValue="&quot;30&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -193,7 +225,6 @@
         <variable name="placeholder" defaultValue="&quot;time&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -205,7 +236,6 @@
         <variable name="placeholder" defaultValue="&quot;time&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -215,7 +245,6 @@
         <variable name="placeholder" defaultValue="&quot;time&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -225,7 +254,6 @@
         <variable name="placeholder" defaultValue="&quot;time&quot;" alwaysStopAt="true" />
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -233,7 +261,6 @@
               description="element upload" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -241,7 +268,6 @@
               description="element upload avatar" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -249,7 +275,6 @@
               description="element rate" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -257,7 +282,6 @@
               description="element rate" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -265,7 +289,6 @@
               description="element rate" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -273,7 +296,6 @@
               description="element color picker" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -281,7 +303,6 @@
               description="element transfer" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -289,7 +310,6 @@
               description="element transfer" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -297,7 +317,6 @@
               description="element form" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -305,7 +324,6 @@
               description="element form inline" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -313,7 +331,6 @@
               description="element form item input" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -321,7 +338,6 @@
               description="element form item select" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -329,7 +345,6 @@
               description="element form item time" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -337,7 +352,6 @@
               description="element form item switch" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -345,7 +359,6 @@
               description="element form item checkbox" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -353,7 +366,6 @@
               description="element form item radio" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -361,7 +373,6 @@
               description="element form item textarea" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -369,7 +380,6 @@
               description="element table" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -377,7 +387,6 @@
               description="element table border" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -385,7 +394,6 @@
               description="element table" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -393,7 +401,6 @@
               description="element table" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -401,7 +408,6 @@
               description="element table" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -409,7 +415,6 @@
               description="element table column" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -417,7 +422,6 @@
               description="element table column" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -453,11 +457,26 @@
         </context>
     </template>
 
-    <template name="el-table-column:slot" value="&lt;template slot-scope=&quot;scope&quot;&gt;&#xa;  {{scope.row.status)}}&#xa;&lt;/template&gt;"
-              description="element table column" toReformat="true" toShortenFQNames="true">
+    <template name="el-rules:define" value="{ validator: validatePass, trigger: 'blur' }"
+              description="element rules define" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
             <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-rules:define-data" value="var checkAge = (rule, value, callback) =&gt; {&#xa;  if (!value) {&#xa;    return callback(new Error('empty'));&#xa;  }&#xa;  callback();&#xa;};"
+              description="element rules define" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="el-table-column:slot" value="&lt;el-table-column&#xa;	header-align=&quot;center&quot;&#xa;	align=&quot;center&quot;&#xa;	label=&quot;columnLabel&quot;&gt;&#xa;	&lt;template slot-scope=&quot;scope&quot;&gt;&#xa;	  {{scope.row.status}}&#xa;	&lt;/template&gt;&#xa;&lt;/el-table-column&gt;"
+              description="element table column" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
         </context>
     </template>
 
@@ -465,7 +484,6 @@
               description="element tag" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -473,7 +491,6 @@
               description="element table" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -481,7 +498,6 @@
               description="element tag" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -489,7 +505,6 @@
               description="element tag inside" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -497,7 +512,6 @@
               description="element tag circle" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -505,7 +519,6 @@
               description="element tree" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -513,7 +526,6 @@
               description="element tree select" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -521,7 +533,6 @@
               description="element pagination" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -529,7 +540,6 @@
               description="element pagination background" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -537,7 +547,6 @@
               description="element pagination full" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -545,7 +554,6 @@
               description="element badge" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -553,7 +561,6 @@
               description="element badge button" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -561,7 +568,6 @@
               description="element tag" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -569,7 +575,6 @@
               description="element alert" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -578,7 +583,6 @@
               description="element alert icon" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -650,7 +654,6 @@
               description="element menu" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -658,7 +661,6 @@
               description="element menu submenu" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -666,7 +668,6 @@
               description="element menu group" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -674,7 +675,6 @@
               description="element menu fold" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -682,7 +682,6 @@
               description="element tab" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -690,7 +689,6 @@
               description="element tab card" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -698,7 +696,6 @@
               description="element tab bordercard" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -706,7 +703,6 @@
               description="element breadcrumb" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -714,7 +710,6 @@
               description="element breadcrumb separator" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -722,7 +717,6 @@
               description="element dropdown" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -730,7 +724,6 @@
               description="element dropdown button" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -738,7 +731,6 @@
               description="element steps" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -746,7 +738,6 @@
               description="element step icon" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -754,7 +745,6 @@
               description="element step simple" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -762,7 +752,6 @@
               description="element dialog" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -770,7 +759,6 @@
               description="element dialog form" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -778,7 +766,6 @@
               description="element tooltip" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -786,7 +773,6 @@
               description="element tooltip content" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -794,7 +780,6 @@
               description="element popover" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -802,7 +787,6 @@
               description="element popover insert" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -810,7 +794,6 @@
               description="element card" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -818,7 +801,6 @@
               description="element carousel" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -826,7 +808,6 @@
               description="element carousel card" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -834,7 +815,6 @@
               description="element collapse" toReformat="true" toShortenFQNames="true">
         <context>
             <option name="Vue" value="true"/>
-            <option name="OTHER" value="true" />
         </context>
     </template>
 
@@ -845,5 +825,16 @@
             <option name="OTHER" value="true" />
         </context>
     </template>
+
+    <!--
+    <template name="vx-radio" value=""
+              description="vux radio" toReformat="false" toShortenFQNames="true">
+        <variable name="radio" expression="type" defaultValue="&quot;radio&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+
+        </context>
+    </template>
+    -->
 
 </templateSet>

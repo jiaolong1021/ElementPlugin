@@ -1,4 +1,4 @@
-package element;
+package com.element.xml;
 
 import com.intellij.openapi.util.Condition;
 import com.intellij.psi.PsiElement;

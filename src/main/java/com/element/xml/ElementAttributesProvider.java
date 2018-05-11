@@ -1,12 +1,12 @@
-package element;
+package com.element.xml;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.xml.XmlTag;
 import com.intellij.xml.XmlAttributeDescriptor;
 import com.intellij.xml.XmlAttributeDescriptorsProvider;
-import element.constant.ElementTagConstant;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -21,16 +21,16 @@ public class ElementAttributesProvider implements XmlAttributeDescriptorsProvide
     @Override
     public XmlAttributeDescriptor[] getAttributeDescriptors(XmlTag xmlTag) {
         final Project project = xmlTag.getProject();
-        for (Map.Entry<String, String[]> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
+        for (Map.Entry<String, HashMap<String, String[]>> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
             if (next.getKey().equals(xmlTag.getName())) {
-                String[] attrArray = next.getValue();
-                if (attrArray.length > 0) {
-                    XmlAttributeDescriptor[] attributeDescriptors = new ElementAttributeDescriptor[attrArray.length];
-                    for(int i=0; i<attrArray.length; i++) {
-                        attributeDescriptors[i] = new ElementAttributeDescriptor(project, attrArray[i]);
-                    }
-                    return attributeDescriptors;
+                HashMap<String, String[]> attrMap = next.getValue();
+                XmlAttributeDescriptor[] attributeDescriptors = new ElementAttributeDescriptor[attrMap.size()];
+                int i = 0;
+                for(Map.Entry<String, String[]> attr : attrMap.entrySet()){
+                    attributeDescriptors[i] = new ElementAttributeDescriptor(project, attr.getKey(), attr.getValue());
+                    i++;
                 }
+                return attributeDescriptors;
             }
         }
         return XmlAttributeDescriptor.EMPTY;

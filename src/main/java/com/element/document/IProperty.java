@@ -1,7 +1,7 @@
 /*
  * Copyright 2000-2017 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
-package element.document;
+package com.element.document;
 
 import com.intellij.openapi.actionSystem.DataKey;
 import com.intellij.openapi.util.Iconable;

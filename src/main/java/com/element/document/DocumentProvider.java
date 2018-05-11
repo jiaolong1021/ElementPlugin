@@ -1,4 +1,4 @@
-package element.document;
+package com.element.document;
 
 import com.intellij.lang.documentation.AbstractDocumentationProvider;
 import com.intellij.openapi.util.text.StringUtil;
@@ -27,11 +27,6 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         return file != null ? " [" + file.getName() + "]" : "";
     }
 
-    private static String getLocationStringTest(PsiElement element) {
-        PsiFile file = element.getContainingFile();
-        return file != null ? " [" + file.getName() + "]" : "";
-    }
-
     @NotNull
     private static String renderPropertyValue(IProperty prop) {
         String raw = prop.getValue();
@@ -47,7 +42,8 @@ public class DocumentProvider extends AbstractDocumentationProvider {
         String text = originalElement.getText();
 
         if (null != text) {
-            String doc = "doc: ";
+            System.out.println(text);
+            String doc = "doc: " + text;
             String textHandle = text.replaceAll("-", "").replaceAll("\n|\r\n", "");
             Class clazz = DocumentConstant.class;
             Field[] fields = clazz.getFields();
@@ -61,7 +57,7 @@ public class DocumentProvider extends AbstractDocumentationProvider {
                     break;
                 }
             }
-            if ("".equals(doc)) {
+            if ("doc: ".equals(doc)) {
                 return null;
             }else{
                 return doc;

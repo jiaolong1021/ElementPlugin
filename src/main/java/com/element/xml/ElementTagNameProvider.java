@@ -1,4 +1,4 @@
-package element;
+package com.element.xml;
 
 import com.intellij.codeInsight.completion.XmlTagInsertHandler;
 import com.intellij.codeInsight.lookup.LookupElement;
@@ -8,10 +8,10 @@ import com.intellij.psi.xml.XmlTag;
 import com.intellij.xml.XmlElementDescriptor;
 import com.intellij.xml.XmlNSDescriptor;
 import com.intellij.xml.XmlTagNameProvider;
-import element.constant.ElementTagConstant;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +30,7 @@ public class ElementTagNameProvider implements XmlElementDescriptorProvider, Xml
      */
     @Override
     public void addTagNameVariants(List<LookupElement> list, @NotNull XmlTag xmlTag, String s) {
-        for (Map.Entry<String, String[]> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
+        for (Map.Entry<String, HashMap<String, String[]>> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
             list.add(LookupElementBuilder.create(next.getKey()).withInsertHandler(XmlTagInsertHandler.INSTANCE));
         }
     }
@@ -49,7 +49,7 @@ public class ElementTagNameProvider implements XmlElementDescriptorProvider, Xml
         final XmlElementDescriptor descriptor = nsDescriptor != null ? nsDescriptor.getElementDescriptor(xmlTag) : null;
         // 判断是否包含在特定处理标签内
         boolean special = false;
-        for (Map.Entry<String, String[]> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
+        for (Map.Entry<String, HashMap<String, String[]>> next : ElementTagConstant.TAG_CONSTANT.entrySet()) {
             if (next.getKey().equals(xmlTag.getName())) {
                 special = true;
                 break;

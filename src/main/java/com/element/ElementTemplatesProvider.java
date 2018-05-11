@@ -1,4 +1,4 @@
-package element;
+package com.element;
 
 import com.intellij.codeInsight.template.impl.DefaultLiveTemplatesProvider;
 import org.jetbrains.annotations.Nullable;
@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 public class ElementTemplatesProvider implements DefaultLiveTemplatesProvider {
     @Override
     public String[] getDefaultLiveTemplateFiles() {
-        /* 关联 shen.xml */
+        /* 关联 element.xml */
         return new String[]{"element", "vux"};
     }
 
