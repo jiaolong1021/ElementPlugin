@@ -1,7 +1,7 @@
 # ElementPlugin
 idea plugin for develop with element ui. before use, you must install <a href="https://github.com/JetBrains/intellij-plugins/tree/master/vuejs">vuejs</a> plugin.
 ## basic functions
-### 1 . see tag document (ctrl + Q)
+### 1 . see tag document (win: ctrl + Q, mac: ^ + j), the keyboard shortcut same as quick document
 ![](./img/doc.gif)
 ### 2. live templates (ctrl + space)
 ![](./img/tip.gif)
