@@ -31,7 +31,8 @@
         <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
 
         <!-- 代码块提示 -->
-        <defaultLiveTemplatesProvider implementation="com.element.ElementTemplatesProvider"/>
+        <defaultLiveTemplates file="/element.xml"/>
+        <!--<defaultLiveTemplatesProvider implementation="com.element.ElementTemplatesProvider"/>-->
 
         <!-- 标签文档提示 -->
         <lang.documentationProvider language="HTML" implementationClass="com.element.document.DocumentProvider" order="first"/>

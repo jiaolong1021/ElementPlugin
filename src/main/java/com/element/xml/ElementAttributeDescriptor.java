@@ -47,7 +47,7 @@ public class ElementAttributeDescriptor extends BasicXmlAttributeDescriptor impl
     public void init(PsiElement element) {}
 
     @Override
-    public Object[] getDependences() {
+    public Object @NotNull [] getDependencies() {
         return ArrayUtil.EMPTY_OBJECT_ARRAY;
     }
 
